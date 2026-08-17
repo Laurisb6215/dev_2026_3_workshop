@@ -105,7 +105,12 @@ class Conversion:
             binario_a_decimal("1010") -> 10
             binario_a_decimal("11111111") -> 255
         """
-        pass
+        decimal = 0
+
+        for digito in binario:
+            decimal = decimal * 2 + int(digito)
+
+        return decimal
     
     def decimal_a_romano(self, numero):
         """
