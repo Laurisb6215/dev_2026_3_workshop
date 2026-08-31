@@ -46,7 +46,11 @@ class Logica:
         Returns:
             bool: Resultado de NOT a
         """
-        pass
+        if a == True:
+            return False
+        else:
+            return True
+    
     
     def XOR(self, a, b):
         """
@@ -59,7 +63,11 @@ class Logica:
         Returns:
             bool: Resultado de a XOR b
         """
-        pass
+        if a == b:
+            return False
+        else:
+            return True
+    
     
     def NAND(self, a, b):
         """
