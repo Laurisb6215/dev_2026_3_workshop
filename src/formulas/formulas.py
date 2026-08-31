@@ -60,7 +60,8 @@ class Formulas:
         Ejemplo:
             mruv_velocidad(2, 1, 3) -> 5.0
         """
-        pass
+        velocidad_final= velocidad_inicial + aceleracion* tiempo
+        return velocidad_final
 
     def fuerza_newton(self, masa, aceleracion):
         """
