@@ -79,7 +79,8 @@ class Formulas:
         Ejemplo:
             fuerza_newton(10, 2) -> 20.0
         """
-        pass
+        fuerza = masa*aceleracion
+        return fuerza
 
     def energia_cinetica(self, masa, velocidad):
         """
