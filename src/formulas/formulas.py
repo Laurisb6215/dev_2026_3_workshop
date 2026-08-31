@@ -19,7 +19,8 @@ class Formulas:
         Ejemplo:
             velocidad_media(100, 10) -> 10.0
         """
-        return distancia / tiempo
+        velocidad_media = distancia / tiempo
+        return velocidad_media
 
     def mruv_posicion(self, posicion_inicial, velocidad_inicial, aceleracion, tiempo):
         """
