@@ -137,7 +137,8 @@ class Formulas:
         Ejemplo:
             ley_ohm_voltaje(2, 5) -> 10.0
         """
-        pass
+        voltaje = corriente * resistencia
+        return voltaje
 
     def ley_ohm_corriente(self, voltaje, resistencia):
         """
