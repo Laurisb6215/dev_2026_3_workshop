@@ -140,7 +140,7 @@ class Formulas:
         voltaje = corriente * resistencia
         return voltaje
 
-    def ley_ohm_corriente(self, voltaje, resistencia):
+    def ley_ohm_corriente(self, voltaje, resistencia,):
         """
         Calcula la corriente usando la ley de Ohm.
 
@@ -156,7 +156,8 @@ class Formulas:
         Ejemplo:
             ley_ohm_corriente(10, 5) -> 2.0
         """
-        pass
+        corriente = voltaje / resistencia
+        return corriente
 
     def interes_simple(self, capital, tasa, tiempo):
         """
