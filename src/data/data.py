@@ -161,7 +161,7 @@ def implementar_pila(self):
     def size():
         return len(pila)
 
-        return {
+    return {
         "push": push,
         "pop": pop,
         "peek": peek,
@@ -170,16 +170,43 @@ def implementar_pila(self):
     }
     
     
-    def implementar_cola(self):
+def implementar_cola(self):
         """
         Implementa una estructura de datos tipo cola (queue) usando listas.
         
         Returns:
             dict: Diccionario con métodos enqueue, dequeue, peek y is_empty
         """
-        pass
+        cola = []
+
+        def enqueue(elemento):
+            cola.append(elemento)
+
+        def dequeue():
+            if is_empty():
+                raise IndexError("No se puede hacer dequeue: la cola está vacía")
+            return cola.pop(0)
+
+        def peek():
+            if is_empty():
+                raise IndexError("No se puede hacer peek: la cola está vacía")
+            return cola[0]
+
+        def is_empty():
+            return len(cola) == 0
+
+        def size():
+            return len(cola)
+
+        return {
+            "enqueue": enqueue,
+            "dequeue": dequeue,
+            "peek": peek,
+            "is_empty": is_empty,
+            "size": size
+        }
     
-    def matriz_transpuesta(self, matriz):
+def matriz_transpuesta(self, matriz):
         """
         Calcula la transpuesta de una matriz.
         
@@ -189,4 +216,13 @@ def implementar_pila(self):
         Returns:
             list: Matriz transpuesta
         """
-        pass
+        if not matriz:
+            return []
+        filas = len(matriz)
+        columnas = len(matriz[0])
+        transpuesta = [[0] * filas for _ in range(columnas)]
+
+        for i in range(filas):
+            for j in range(columnas):
+                transpuesta[j][i] = matriz[i][j]
+        return transpuesta
