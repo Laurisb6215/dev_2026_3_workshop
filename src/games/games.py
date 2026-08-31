@@ -15,7 +15,16 @@ class Games:
             - Tijera vence a papel
             - Papel vence a piedra
         """
-        pass
+        if jugador1 == "piedra" and jugador2 == "tijera":
+            return "ganador jugador 1"
+        elif jugador1 == "tijera" and jugador2 == "papel":
+            return "ganador jugador 1"
+        elif jugador1 == "papel" and jugador2 == "piedra":
+            return "ganador jugador 1"
+        elif jugador1 == jugador2:
+            return "empate"
+        else:
+            return "ganador jugador 2"
     
     def adivinar_numero_pista(self, numero_secreto, intento):
         """
@@ -42,8 +51,8 @@ class Games:
             
         Ejemplo:
             [["X", "X", "X"],
-             ["O", "O", " "],
-             [" ", " ", " "]] -> "X"
+            ["O", "O", " "],
+            [" ", " ", " "]] -> "X"
         """
         pass
     
