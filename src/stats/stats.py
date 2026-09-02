@@ -31,7 +31,16 @@ class Stats:
             mediana([1, 2, 3, 4, 5]) -> 3.0
             mediana([1, 2, 3, 4]) -> 2.5
         """
-        pass
+        if not numeros:
+                    return 0
+        
+        numeros.sort()
+        n = len(numeros)
+        mitad = n // 2
+        if n % 2 == 1:
+            return numeros[mitad]
+        else:
+            return (numeros[mitad - 1] + numeros[mitad]) / 2
     
     def moda(self, numeros):
         """
@@ -47,7 +56,17 @@ class Stats:
         Ejemplo:
             moda([1, 2, 2, 3, 3, 3]) -> 3
         """
-        pass
+        if not numeros:
+            return None
+                
+        moda = {}
+        for num in numeros:
+            moda[num] = moda.get(num, 0) + 1
+                
+        max_frecuencia = max(moda.values())
+        for num in numeros:
+            if moda[num] == max_frecuencia:
+                return num
     
     def desviacion_estandar(self, numeros):
         """
